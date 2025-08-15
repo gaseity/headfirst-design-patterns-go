@@ -33,6 +33,6 @@ func (cs *ChicagoPizzaStore) createPizza(item string) Pizza {
 
 func (cs *ChicagoPizzaStore) orderPizza(item string) Pizza {
 	pizza := cs.createPizza((item))
-	cs.cookPizza(pizza)
+	cs.makingPizza(pizza)
 	return pizza
 }

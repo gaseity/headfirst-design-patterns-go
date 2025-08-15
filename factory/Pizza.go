@@ -1,16 +1,11 @@
 package main
 
 import (
-	"fmt"
 	"strings"
 )
 
 type Pizza interface {
 	prepare()
-
-	bake()
-	cut()
-	box()
 
 	setName(string)
 	getName() string
@@ -26,18 +21,6 @@ type PizzaSoul struct {
 	cheese    Cheese
 	pepperoni Pepperoni
 	clam      Clams
-}
-
-func (ps *PizzaSoul) bake() {
-	fmt.Println("Bake for 25 minutes at 350")
-}
-
-func (ps *PizzaSoul) cut() {
-	fmt.Println("Cutting the pizza into diagonal slices")
-}
-
-func (ps *PizzaSoul) box() {
-	fmt.Println("Place pizza in official PizzaStore box")
 }
 
 func (ps *PizzaSoul) setName(name string) {
